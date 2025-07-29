@@ -28,7 +28,7 @@ import {MatButton} from '@angular/material/button';
 })
 
 export class CarDetailedComponent implements OnInit, OnDestroy {
-  car!: CarInterface;
+  car: CarInterface | null = null;
   id: any
   private _unsubscribe$ = new Subject()
 
