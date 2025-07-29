@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from "@angular/core"
 import {ReactiveFormsModule, UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms"
-import {DatePipe, NgIf} from "@angular/common"
+import {DatePipe} from "@angular/common"
 import {Router} from "@angular/router"
 import {takeUntil} from "rxjs/operators"
 import {Subject} from "rxjs"
@@ -36,8 +36,7 @@ import {DateFormatDirective} from '@shared/directives/date-format.directive';
     MatDatepickerInput,
     MatInput,
     DateFormatDirective,
-    MatDatepickerModule,
-    NgIf,
+    MatDatepickerModule
   ],
   providers: [DatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -129,5 +128,4 @@ export class CarCreateComponent implements OnInit, OnDestroy {
     this._unsubscribe$.next(true)
     this._unsubscribe$.complete()
   }
-
 }

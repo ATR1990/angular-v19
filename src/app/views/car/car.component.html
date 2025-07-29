@@ -1,18 +1,18 @@
 <mat-card>
   <img mat-card-image [ngSrc]="'aston_martin.jpg'" priority alt="Aston Martin" height="216" width="384">
   <mat-card-content>
-    <div class="mat-title text-truncate">{{car.Name | titlecase}}</div>
-    <div class="mat-subheading-2">{{'Цена:'}} {{car.Price}} {{car.Currency}}</div>
-    <div class="mat-subheading-2">{{'Год:'}} {{car.Year | date: 'yyyy'}}</div>
+    <div class="mat-title text-truncate">{{car()?.Name | titlecase}}</div>
+    <div class="mat-subheading-2">{{'Цена:'}} {{car()?.Price}} {{car()?.Currency}}</div>
+    <div class="mat-subheading-2">{{'Год:'}} {{car()?.Year | date: 'yyyy'}}</div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-icon-button (click)="editCar(car.id)" matTooltip="Редактировать">
+    <button mat-icon-button (click)="editCar(car()?.id)" matTooltip="Редактировать">
       <mat-icon color="primary">edit</mat-icon>
     </button>
-    <button mat-icon-button (click)="openConfirmModal(car.id)" matTooltip="Удалить">
+    <button mat-icon-button (click)="openConfirmModal(car()?.id)" matTooltip="Удалить">
       <mat-icon color="warn">delete</mat-icon>
     </button>
-    <button mat-icon-button (click)="detailedViewCar(car.id)" matTooltip="Детальный просмотр">
+    <button mat-icon-button (click)="detailedViewCar(car()?.id)" matTooltip="Детальный просмотр">
       <mat-icon>visibility</mat-icon>
     </button>
   </mat-card-actions>

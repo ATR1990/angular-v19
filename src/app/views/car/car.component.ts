@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnDestroy} from '@angular/core'
+import {ChangeDetectionStrategy, Component, input, OnDestroy} from '@angular/core'
 import {Router} from "@angular/router"
 import {Subject} from "rxjs"
 import {takeUntil, tap} from "rxjs/operators"
@@ -34,7 +34,7 @@ import {MatTooltip} from '@angular/material/tooltip';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarComponent implements OnDestroy {
-  @Input() car!: CarInterface
+  car = input<CarInterface>();
   dialogRef: any
   private _unsubscribe$ = new Subject()
 
