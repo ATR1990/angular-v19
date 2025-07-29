@@ -26,7 +26,5 @@ import {MatButton} from '@angular/material/button';
 export class ConfirmModalComponent {
   onConfirm = new EventEmitter()
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-  }
-
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }

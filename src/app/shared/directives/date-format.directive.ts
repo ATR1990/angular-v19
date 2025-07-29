@@ -1,11 +1,8 @@
 import {Directive} from '@angular/core'
-
 import {MAT_DATE_FORMATS} from "@angular/material/core"
 
 const MY_FORMAT = {
-  parse: {
-    dateInput: 'dd.MM.YYYY',
-  },
+  parse: { dateInput: 'dd.MM.YYYY' },
   display: {
     dateInput: 'DD.MM.YYYY',
     monthYearLabel: 'MMM YYYY',
@@ -21,5 +18,4 @@ const MY_FORMAT = {
   ]
 })
 
-export class DateFormatDirective {
-}
+export class DateFormatDirective {}

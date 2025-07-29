@@ -17,7 +17,7 @@ import {MatButton} from '@angular/material/button';
     MatFormField,
     MatLabel,
     MatButton
-  ],
+  ]
 })
 
 export class SearchComponent implements OnInit {
@@ -26,8 +26,7 @@ export class SearchComponent implements OnInit {
   constructor(
     private carsService: CarsService,
     private fb: UntypedFormBuilder
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this._createForm()
@@ -41,7 +40,6 @@ export class SearchComponent implements OnInit {
 
   filterData(): void {
     const data: any = this.filterForm.getRawValue()
-    console.log(data.search)
     this.carsService.search$.next(data.search)
   }
 

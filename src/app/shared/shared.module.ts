@@ -1,15 +1,10 @@
 import {NgModule} from "@angular/core"
 import {ReactiveFormsModule} from "@angular/forms"
 
-import {
-  MaterialModule
-} from "."
+import {MaterialModule} from "."
 
 @NgModule({
-  imports: [
-    MaterialModule,
-    ReactiveFormsModule
-  ]
+  imports: [MaterialModule, ReactiveFormsModule]
 })
 
 export class SharedModule {}
