@@ -13,10 +13,9 @@
 </div>
 
 <div class="row mt-3">
-  <div
-    class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mt-3 mb-3"
-    *ngFor="let car of cars; trackBy: trackByFn"
-  >
-    <app-car [car]="car"></app-car>
-  </div>
+  @for (car of cars; let i = $index; track trackByFn(i, car)) {
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-3">
+      <app-car [car]="car"></app-car>
+    </div>
+  }
 </div>

@@ -100,10 +100,21 @@ export class CarCreateComponent implements OnInit, OnDestroy {
   }
 
   getErrorMessage(controlName: string): string {
-    return this.form.controls[controlName].hasError('required') ? 'Поле обязательно для заполнения' :
-      this.form.controls[controlName].hasError('min') ? 'не меньше 1' :
-        this.form.controls['Name'].errors?.['minlength'] || this.form.controls['Name'].errors?.['maxlength'] ? 'от 3 до 50 символов' :
-          ''
+    const control = this.form.controls[controlName];
+
+    if (control.hasError('required')) {
+      return 'Поле обязательно для заполнения';
+    }
+
+    if (control.hasError('min')) {
+      return 'Значение не может быть меньше 1';
+    }
+
+    if (control.hasError('minlength') || control.hasError('maxlength')) {
+      return 'Длина должна быть от 3 до 50 символов';
+    }
+
+    return '';
   }
 
   resetFilter(): void {

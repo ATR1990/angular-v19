@@ -7,7 +7,11 @@
             <mat-form-field class="w-100">
               <mat-label>Ускорение</mat-label>
               <input matInput formControlName="Acceleration" autocomplete="off">
-              <mat-error *ngIf="form.controls['Acceleration'].invalid">{{getErrorMessage('Acceleration')}}</mat-error>
+              <mat-error>
+                @if (form.get('Acceleration')?.invalid) {
+                  {{ getErrorMessage('Acceleration') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -16,7 +20,11 @@
             <mat-form-field class="w-100">
               <mat-label>Валюта</mat-label>
               <input matInput formControlName="Currency" autocomplete="off">
-              <mat-error *ngIf="form.controls['Currency'].invalid">{{getErrorMessage('Currency')}}</mat-error>
+              <mat-error>
+                @if (form.get('Currency')?.invalid) {
+                  {{ getErrorMessage('Currency') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -25,7 +33,11 @@
             <mat-form-field class="w-100">
               <mat-label>Количество цилиндров</mat-label>
               <input matInput formControlName="Cylinders" autocomplete="off">
-              <mat-error *ngIf="form.controls['Cylinders'].invalid">{{getErrorMessage('Cylinders')}}</mat-error>
+              <mat-error>
+                @if (form.get('Cylinders')?.invalid) {
+                  {{ getErrorMessage('Cylinders') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -34,7 +46,11 @@
             <mat-form-field class="w-100">
               <mat-label>Объем двигателя</mat-label>
               <input matInput formControlName="Displacement" autocomplete="off">
-              <mat-error *ngIf="form.controls['Displacement'].invalid">{{getErrorMessage('Displacement')}}</mat-error>
+              <mat-error>
+                @if (form.get('Displacement')?.invalid) {
+                  {{ getErrorMessage('Displacement') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -43,7 +59,11 @@
             <mat-form-field class="w-100">
               <mat-label>Мощность (л.с.)</mat-label>
               <input matInput formControlName="Horsepower" autocomplete="off">
-              <mat-error *ngIf="form.controls['Horsepower'].invalid">{{getErrorMessage('Horsepower')}}</mat-error>
+              <mat-error>
+                @if (form.get('Horsepower')?.invalid) {
+                  {{ getErrorMessage('Horsepower') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -52,7 +72,11 @@
             <mat-form-field class="w-100">
               <mat-label>Расход топлива (миль на галлон)</mat-label>
               <input matInput formControlName="Miles_per_Gallon" autocomplete="off">
-              <mat-error *ngIf="form.controls['Miles_per_Gallon'].invalid">{{getErrorMessage('Miles_per_Gallon')}}</mat-error>
+              <mat-error>
+                @if (form.get('Miles_per_Gallon')?.invalid) {
+                  {{ getErrorMessage('Miles_per_Gallon') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -61,7 +85,11 @@
             <mat-form-field class="w-100">
               <mat-label>Название</mat-label>
               <input matInput formControlName="Name" autocomplete="off">
-              <mat-error *ngIf="form.controls['Name'].invalid">{{getErrorMessage('Name')}}</mat-error>
+              <mat-error>
+                @if (form.get('Name')?.invalid) {
+                  {{ getErrorMessage('Name') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -70,7 +98,11 @@
             <mat-form-field class="w-100">
               <mat-label>Происхождение</mat-label>
               <input matInput formControlName="Origin" autocomplete="off">
-              <mat-error *ngIf="form.controls['Origin'].invalid">{{getErrorMessage('Origin')}}</mat-error>
+              <mat-error>
+                @if (form.get('Origin')?.invalid) {
+                  {{ getErrorMessage('Origin') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -79,7 +111,11 @@
             <mat-form-field class="w-100">
               <mat-label>Цена</mat-label>
               <input matInput formControlName="Price" autocomplete="off">
-              <mat-error *ngIf="form.controls['Price'].invalid">{{getErrorMessage('Price')}}</mat-error>
+              <mat-error>
+                @if (form.get('Price')?.invalid) {
+                  {{ getErrorMessage('Price') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -88,7 +124,11 @@
             <mat-form-field class="w-100">
               <mat-label>Вес в фунтах</mat-label>
               <input matInput formControlName="Weight_in_lbs" autocomplete="off">
-              <mat-error *ngIf="form.controls['Weight_in_lbs'].invalid">{{getErrorMessage('Weight_in_lbs')}}</mat-error>
+              <mat-error>
+                @if (form.get('Weight_in_lbs')?.invalid) {
+                  {{ getErrorMessage('Weight_in_lbs') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -100,7 +140,11 @@
                      autocomplete="off">
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
-              <mat-error *ngIf="form.controls['Year'].invalid">{{getErrorMessage('Year')}}</mat-error>
+              <mat-error>
+                @if (form.get('Year')?.invalid) {
+                  {{ getErrorMessage('Year') }}
+                }
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
