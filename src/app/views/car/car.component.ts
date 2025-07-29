@@ -29,12 +29,12 @@ import {MatTooltip} from '@angular/material/tooltip';
     MatCardImage,
     MatIconButton,
     MatTooltip,
-    NgOptimizedImage,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarComponent implements OnDestroy {
-  car = input<CarInterface>();
+  car = input.required<CarInterface>();
   dialogRef: any
   private _unsubscribe$ = new Subject()
 
@@ -46,13 +46,11 @@ export class CarComponent implements OnDestroy {
   ) {
   }
 
-  editCar(id?: number): void {
-    if (!id) return;
+  editCar(id: number): void {
     this.router?.navigate(['/edit', `${id}`])
   }
 
-  detailedViewCar(id?: number): void {
-    if (!id) return;
+  detailedViewCar(id: number): void {
     this.router?.navigate(['/detailed-view', `${id}`])
   }
 
@@ -99,8 +97,7 @@ export class CarComponent implements OnDestroy {
       })
   }
 
-  openConfirmModal(id?: number): void {
-    if (!id) return;
+  openConfirmModal(id: number): void {
     this._openDialog()
     this._onConfirm(id)
     this._afterClosed()
