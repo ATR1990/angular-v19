@@ -107,5 +107,4 @@ export class CarComponent implements OnDestroy {
     this._unsubscribe$.next(true)
     this._unsubscribe$.complete()
   }
-
 }
