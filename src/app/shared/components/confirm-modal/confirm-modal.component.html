@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Подтверждение действия</h2>
+<mat-dialog-content>
+  <p>{{data?.text}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Отмена</button>
+  <button
+    mat-button
+    color="{{data?.color ? data?.color : 'primary'}}"
+    (click)="onConfirm.emit()"
+  >
+    Подтвердить
+  </button>
+</mat-dialog-actions>

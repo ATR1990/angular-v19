@@ -1,0 +1,24 @@
+<mat-card class="mt-5">
+  <mat-card-content>
+    <div class="row gx-5">
+      <div class="col-lg-5 pt-3">
+        <img mat-card-image [ngSrc]="'aston_martin.jpg'" priority height="216" width="384" alt="Aston Martin">
+      </div>
+      <div class="col-lg-7 pt-3">
+        <div class="mat-title">{{car.Name | titlecase}}</div>
+        <div class="mat-subheading-2">{{'Количество цилиндров:'}} {{car.Cylinders}}</div>
+        <div class="mat-subheading-2">{{'Мощность:'}} {{car.Horsepower}} {{'л.с.'}}</div>
+        <div class="mat-subheading-2">{{'Вес в фунтах:'}} {{car.Weight_in_lbs}}</div>
+        <div class="mat-subheading-2">{{'Ускорение:'}} {{car.Acceleration}}</div>
+        <div class="mat-subheading-2">{{'Объем двигателя:'}} {{car.Displacement}}</div>
+        <div class="mat-subheading-2">{{'Расход топлива:'}} {{car.Miles_per_Gallon}} {{'миль на галлон'}}</div>
+        <div class="mat-subheading-2">{{'Происхождение:'}} {{car.Origin}}</div>
+        <div class="mat-subheading-2">{{'Год:'}} {{car.Year | date: 'yyyy'}}</div>
+        <div class="mat-subheading-2">{{'Цена:'}} {{car.Price}} {{car.Currency}}</div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="goToMainPage()">Вернуться назад</button>
+  </mat-card-actions>
+</mat-card>

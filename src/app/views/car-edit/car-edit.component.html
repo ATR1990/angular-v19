@@ -1,0 +1,103 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <mat-card class="w-50">
+    <mat-card-content>
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Acceleration</mat-label>
+              <input matInput formControlName="Acceleration" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Currency</mat-label>
+              <input matInput formControlName="Currency" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Cylinders</mat-label>
+              <input matInput formControlName="Cylinders" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Displacement</mat-label>
+              <input matInput formControlName="Displacement" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Horsepower</mat-label>
+              <input matInput formControlName="Horsepower" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Miles per gallon</mat-label>
+              <input matInput formControlName="Miles_per_Gallon" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="Name" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Origin</mat-label>
+              <input matInput formControlName="Origin" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Price</mat-label>
+              <input matInput formControlName="Price" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Weight in lbs</mat-label>
+              <input matInput formControlName="Weight_in_lbs" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100" appDateFormat>
+              <mat-label>Year</mat-label>
+              <input matInput [min]="minDate" [matDatepicker]="picker" formControlName="Year" readonly
+                     autocomplete="off">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="form.pristine" mat-button (click)="save()">Сохранить</button>
+      <button mat-button (click)="goToMainPage()">Вернуться назад</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

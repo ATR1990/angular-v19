@@ -1,0 +1,115 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <mat-card class="w-50">
+    <mat-card-content>
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Ускорение</mat-label>
+              <input matInput formControlName="Acceleration" autocomplete="off">
+              <mat-error *ngIf="form.controls['Acceleration'].invalid">{{getErrorMessage('Acceleration')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Валюта</mat-label>
+              <input matInput formControlName="Currency" autocomplete="off">
+              <mat-error *ngIf="form.controls['Currency'].invalid">{{getErrorMessage('Currency')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Количество цилиндров</mat-label>
+              <input matInput formControlName="Cylinders" autocomplete="off">
+              <mat-error *ngIf="form.controls['Cylinders'].invalid">{{getErrorMessage('Cylinders')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Объем двигателя</mat-label>
+              <input matInput formControlName="Displacement" autocomplete="off">
+              <mat-error *ngIf="form.controls['Displacement'].invalid">{{getErrorMessage('Displacement')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Мощность (л.с.)</mat-label>
+              <input matInput formControlName="Horsepower" autocomplete="off">
+              <mat-error *ngIf="form.controls['Horsepower'].invalid">{{getErrorMessage('Horsepower')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Расход топлива (миль на галлон)</mat-label>
+              <input matInput formControlName="Miles_per_Gallon" autocomplete="off">
+              <mat-error *ngIf="form.controls['Miles_per_Gallon'].invalid">{{getErrorMessage('Miles_per_Gallon')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Название</mat-label>
+              <input matInput formControlName="Name" autocomplete="off">
+              <mat-error *ngIf="form.controls['Name'].invalid">{{getErrorMessage('Name')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Происхождение</mat-label>
+              <input matInput formControlName="Origin" autocomplete="off">
+              <mat-error *ngIf="form.controls['Origin'].invalid">{{getErrorMessage('Origin')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Цена</mat-label>
+              <input matInput formControlName="Price" autocomplete="off">
+              <mat-error *ngIf="form.controls['Price'].invalid">{{getErrorMessage('Price')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Вес в фунтах</mat-label>
+              <input matInput formControlName="Weight_in_lbs" autocomplete="off">
+              <mat-error *ngIf="form.controls['Weight_in_lbs'].invalid">{{getErrorMessage('Weight_in_lbs')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="w-100" appDateFormat>
+              <mat-label>Год</mat-label>
+              <input matInput [min]="minDate" [matDatepicker]="picker" formControlName="Year" readonly
+                     autocomplete="off">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
+              <mat-error *ngIf="form.controls['Year'].invalid">{{getErrorMessage('Year')}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="form.invalid" mat-button color="primary" (click)="save()">Сохранить</button>
+      <button [disabled]="form.pristine" mat-button color="warn" (click)="resetFilter()">Сброс</button>
+      <button mat-button (click)="goToMainPage()">Вернуться назад</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

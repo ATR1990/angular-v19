@@ -1,0 +1,12 @@
+<form [formGroup]="filterForm" class="mt-5">
+  <div class="row">
+    <div class="col">
+      <mat-form-field class="w-100">
+        <mat-label>Поиск по всем полям</mat-label>
+        <input matInput formControlName="search" autocomplete="off">
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-button color="primary" (click)="filterData()">Найти</button>
+  <button mat-button color="warn" (click)="resetFilter()">Сброс</button>
+</form>
