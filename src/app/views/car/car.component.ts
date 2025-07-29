@@ -46,11 +46,13 @@ export class CarComponent implements OnDestroy {
   ) {
   }
 
-  editCar(id: number): void {
+  editCar(id?: number): void {
+    if (!id) return;
     this.router?.navigate(['/edit', `${id}`])
   }
 
-  detailedViewCar(id: number): void {
+  detailedViewCar(id?: number): void {
+    if (!id) return;
     this.router?.navigate(['/detailed-view', `${id}`])
   }
 
@@ -97,7 +99,8 @@ export class CarComponent implements OnDestroy {
       })
   }
 
-  openConfirmModal(id: number): void {
+  openConfirmModal(id?: number): void {
+    if (!id) return;
     this._openDialog()
     this._onConfirm(id)
     this._afterClosed()
